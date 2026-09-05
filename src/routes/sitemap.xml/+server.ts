@@ -14,7 +14,8 @@ export const GET: RequestHandler = async () => {
 		'/kebudayaan',
 		'/kecamatan',
 		'/masjid',
-		'/universitas-ut-rembang'
+		'/universitas-ut-rembang',
+		'/mts-riyadlotut-thalabah'
 	];
 
 	const wisata = getAllWisata();

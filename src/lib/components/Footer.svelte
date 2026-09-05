@@ -27,6 +27,7 @@
 					<li><a href="/kecamatan" class="hover:text-blue-400 transition-colors">14 Kecamatan</a></li>
 					<li><a href="/masjid" class="hover:text-blue-400 transition-colors">Masjid & Syiar Islam</a></li>
 					<li><a href="/universitas-ut-rembang" class="hover:text-blue-400 transition-colors">UT Rembang</a></li>
+					<li><a href="/mts-riyadlotut-thalabah" class="hover:text-blue-400 transition-colors">MTs Riyadlotut Thalabah</a></li>
 				</ul>
 			</div>
 
