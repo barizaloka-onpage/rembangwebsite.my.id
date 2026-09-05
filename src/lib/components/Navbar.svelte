@@ -29,7 +29,7 @@
 						KABUPATEN REMBANG
 					</span>
 					<span class="block text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-						Bumi Kartini • Karya Pemuda Rembang
+						Bumi Kartini • Jawa Tengah
 					</span>
 				</div>
 			</a>
