@@ -25,6 +25,7 @@
 					<li><a href="/kuliner" class="hover:text-blue-400 transition-colors">Kuliner Khas</a></li>
 					<li><a href="/kebudayaan" class="hover:text-blue-400 transition-colors">Seni & Budaya</a></li>
 					<li><a href="/kecamatan" class="hover:text-blue-400 transition-colors">14 Kecamatan</a></li>
+					<li><a href="/masjid" class="hover:text-blue-400 transition-colors">Masjid & Syiar Islam</a></li>
 				</ul>
 			</div>
 

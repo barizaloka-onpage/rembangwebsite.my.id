@@ -37,6 +37,20 @@ export interface BudayaContent {
 	body: string;
 }
 
+export interface MasjidContent {
+	id: string;
+	nama: string;
+	kategori: string;
+	lokasi: string;
+	kecamatan: string;
+	kapasitas: string;
+	telepon: string;
+	website: string;
+	deskripsi: string;
+	fitur: string[];
+	body: string;
+}
+
 function parseFrontmatter(rawContent: string) {
 	const frontmatterRegex = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 	const match = rawContent.match(frontmatterRegex);
@@ -149,6 +163,22 @@ export function getAllBudaya(): BudayaContent[] {
 	}));
 }
 
+export function getAllMasjid(): MasjidContent[] {
+	return getFilesFromFolder('masjid').map(({ metadata, body }) => ({
+		id: metadata.id || '',
+		nama: metadata.nama || '',
+		kategori: metadata.kategori || 'masjid-besar',
+		lokasi: metadata.lokasi || '',
+		kecamatan: metadata.kecamatan || '',
+		kapasitas: metadata.kapasitas || '',
+		telepon: metadata.telepon || '',
+		website: metadata.website || '',
+		deskripsi: body || metadata.deskripsi || '',
+		fitur: Array.isArray(metadata.fitur) ? metadata.fitur : [],
+		body
+	}));
+}
+
 export function getWisataById(id?: string): WisataContent | undefined {
 	if (!id) return undefined;
 	return getAllWisata().find((w) => w.id === id);
@@ -162,4 +192,9 @@ export function getKulinerById(id?: string): KulinerContent | undefined {
 export function getKecamatanBySlug(slug?: string): KecamatanContent | undefined {
 	if (!slug) return undefined;
 	return getAllKecamatan().find((k) => k.slug === slug.toLowerCase());
+}
+
+export function getMasjidById(id?: string): MasjidContent | undefined {
+	if (!id) return undefined;
+	return getAllMasjid().find((m) => m.id === id);
 }

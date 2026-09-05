@@ -3,19 +3,23 @@ import {
 	getAllKuliner,
 	getAllKecamatan,
 	getAllBudaya,
+	getAllMasjid,
 	getWisataById,
 	getKulinerById,
 	getKecamatanBySlug,
+	getMasjidById,
 	type WisataContent,
 	type KulinerContent,
 	type KecamatanContent,
-	type BudayaContent
+	type BudayaContent,
+	type MasjidContent
 } from '$lib/contentLoader';
 
 export type Wisata = WisataContent;
 export type Kuliner = KulinerContent;
 export type Kecamatan = KecamatanContent;
 export type Budaya = BudayaContent;
+export type Masjid = MasjidContent;
 
 export const DATA_BERANDA = {
 	heroTagline: 'Pesona Bahari, Sejarah Kartini, & Akulturasi Budaya Lasem',
@@ -47,5 +51,6 @@ export const LIST_WISATA: Wisata[] = getAllWisata();
 export const LIST_KULINER: Kuliner[] = getAllKuliner();
 export const LIST_KECAMATAN: Kecamatan[] = getAllKecamatan();
 export const LIST_BUDAYA: Budaya[] = getAllBudaya();
+export const LIST_MASJID: Masjid[] = getAllMasjid();
 
-export { getWisataById, getKulinerById, getKecamatanBySlug };
+export { getWisataById, getKulinerById, getKecamatanBySlug, getMasjidById };

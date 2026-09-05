@@ -1,4 +1,4 @@
-import { getAllWisata, getAllKuliner, getAllKecamatan } from '$lib/contentLoader';
+import { getAllWisata, getAllKuliner, getAllKecamatan, getAllMasjid } from '$lib/contentLoader';
 import type { RequestHandler } from './$types';
 
 export const prerender = true;
@@ -12,22 +12,26 @@ export const GET: RequestHandler = async () => {
 		'/wisata',
 		'/kuliner',
 		'/kebudayaan',
-		'/kecamatan'
+		'/kecamatan',
+		'/masjid'
 	];
 
 	const wisata = getAllWisata();
 	const kuliner = getAllKuliner();
 	const kecamatan = getAllKecamatan();
+	const masjid = getAllMasjid();
 
 	const wisataUrls = wisata.map((item) => `/wisata/${item.id}`);
 	const kulinerUrls = kuliner.map((item) => `/kuliner/${item.id}`);
 	const kecamatanUrls = kecamatan.map((item) => `/kecamatan/${item.slug}`);
+	const masjidUrls = masjid.map((item) => `/masjid/${item.id}`);
 
 	const allPages = [
 		...staticPages,
 		...wisataUrls,
 		...kulinerUrls,
-		...kecamatanUrls
+		...kecamatanUrls,
+		...masjidUrls
 	];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

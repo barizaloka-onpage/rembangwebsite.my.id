@@ -9,7 +9,8 @@
 		{ href: '/wisata', label: 'Wisata' },
 		{ href: '/kuliner', label: 'Kuliner' },
 		{ href: '/kebudayaan', label: 'Kebudayaan' },
-		{ href: '/kecamatan', label: 'Kecamatan' }
+		{ href: '/kecamatan', label: 'Kecamatan' },
+		{ href: '/masjid', label: 'Masjid' }
 	];
 
 	function toggleMenu() {
